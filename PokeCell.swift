@@ -15,12 +15,22 @@ class PokeCell: UICollectionViewCell {
     
     var pokemon: Pokemon!
     
+    
+    //ENABLE TO CHANGE THE LAYER STYLE OF THAT UIVIEWCELL
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        layer.cornerRadius = 5.0
+    }
+    
+    
+    //SET THE IMAGE & TITLE OF THE POKEMON (PER CELL)
     func ConfigureCell (pokemon: Pokemon) {
         
         self.pokemon = pokemon
         
         Lbl.text = self.pokemon.name.capitalized
         PokeImg.image = UIImage.init(named: "\(self.pokemon.pokedexID)")
+        
                 
     }
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BaW-kE-dIi">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,21 +21,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bg" translatesAutoresizingMaskIntoConstraints="NO" id="wzV-WT-rPo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Bg" translatesAutoresizingMaskIntoConstraints="NO" id="wzV-WT-rPo">
                                 <rect key="frame" x="0.0" y="110" width="320" height="458"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SZs-bi-a5l">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZs-bi-a5l">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="yak-dh-80S"/>
+                                </constraints>
                             </view>
                             <searchBar contentMode="redraw" ambiguous="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Ieg-Be-n0C">
-                                <rect key="frame" x="0.0" y="65" width="320" height="45"/>
+                                <rect key="frame" x="0.0" y="65" width="320" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Nj-MQ-Eh2">
-                                <rect key="frame" x="20" y="130" width="280" height="418"/>
+                                <rect key="frame" x="20" y="129" width="280" height="419"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EZO-kI-UQA">
                                     <size key="itemSize" width="105" height="105"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -85,10 +87,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Ieg-Be-n0C" firstAttribute="leading" secondItem="N62-ty-Vry" secondAttribute="leading" id="5Pc-yX-xz1"/>
                             <constraint firstItem="2Nj-MQ-Eh2" firstAttribute="top" secondItem="Ieg-Be-n0C" secondAttribute="bottom" constant="20" id="B3K-xi-wcb"/>
+                            <constraint firstAttribute="trailing" secondItem="Ieg-Be-n0C" secondAttribute="trailing" id="EGm-7y-4Ju"/>
+                            <constraint firstAttribute="trailing" secondItem="SZs-bi-a5l" secondAttribute="trailing" id="ILe-FU-8f9"/>
+                            <constraint firstItem="SZs-bi-a5l" firstAttribute="leading" secondItem="N62-ty-Vry" secondAttribute="leading" id="J5D-YC-7kt"/>
                             <constraint firstAttribute="trailing" secondItem="2Nj-MQ-Eh2" secondAttribute="trailing" constant="20" id="JqO-6A-QSL"/>
+                            <constraint firstAttribute="trailing" secondItem="wzV-WT-rPo" secondAttribute="trailing" id="MRL-Wv-dyi"/>
                             <constraint firstItem="NBe-eI-Hbn" firstAttribute="top" secondItem="2Nj-MQ-Eh2" secondAttribute="bottom" constant="20" id="OhE-dU-kFG"/>
+                            <constraint firstItem="wzV-WT-rPo" firstAttribute="leading" secondItem="N62-ty-Vry" secondAttribute="leading" id="Puv-VP-qZ7"/>
+                            <constraint firstItem="Ieg-Be-n0C" firstAttribute="top" secondItem="SZs-bi-a5l" secondAttribute="bottom" id="Y1D-tF-Wuy"/>
+                            <constraint firstItem="SZs-bi-a5l" firstAttribute="top" secondItem="N62-ty-Vry" secondAttribute="top" id="ad9-RK-tTM"/>
+                            <constraint firstItem="NBe-eI-Hbn" firstAttribute="top" secondItem="wzV-WT-rPo" secondAttribute="bottom" id="eZh-4Z-8Cd"/>
                             <constraint firstItem="2Nj-MQ-Eh2" firstAttribute="leading" secondItem="N62-ty-Vry" secondAttribute="leading" constant="20" id="jE2-pl-C4A"/>
+                            <constraint firstItem="wzV-WT-rPo" firstAttribute="top" secondItem="Ieg-Be-n0C" secondAttribute="bottom" id="ruw-3K-uKP"/>
                         </constraints>
                     </view>
                     <connections>
